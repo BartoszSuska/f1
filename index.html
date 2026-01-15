@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIELKI RANGING GRID 2 - SEZON 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="container">
+        <div class="volume-control">
+            <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
+        </div>
+        <div class="standings">
+            <img class="logo" src="images/logo.jpg">
+            <table class="leaderboard">
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="clips">
+            <video id="clip" autoplay controls preload="none"></video>
+            <div class="clip-buttons">
+                <button class="trapezoid-button like-button">LIKE</button>
+                <button class="trapezoid-button next-button">NEXT</button>            
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="breaking-news">BREAKING NEWS</div>
+        <div class="minor-info">
+            <div class="minor-info-panel"></div>
+        </div>
+        <div class="major-info">
+            <div class="major-info-live">
+                <span class="major-info-live-logo">D5</span>
+                <span class="major-info-live-indicator">· LIVE</span>
+            </div>
+            <div class="major-info-text">SEZON 2 - JUŻ NIEDŁUGO!</div>
+        </div>
+    </div>
+    <audio id="bg-music" autoplay loop muted volume="0.5">
+        <source src="music/theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
