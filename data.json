@@ -1,25 +1,25 @@
 {
     "players": [
         {
-            "name": "DZICCO PALTEGUMMI", "races": 4, "points": 14, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
+            "name": "DZICCO PALTEGUMMI", "races": 4, "points": 10, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
         },
         {
-            "name": "KRZYCHU MCQUEEN", "races": 3, "points": 19, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
+            "name": "KRZYCHU MCQUEEN", "races": 3, "points": 13, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
         },
         {
-            "name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 4, "points": 26, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"
+            "name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 4, "points": 19, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"
         },
         {
-            "name": "CLINT PALSPRZĘGŁO", "races": 4, "points": 17, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
+            "name": "CLINT PALSPRZĘGŁO", "races": 4, "points": 12, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
         },
         {
-            "name": "LUKI PRZYBANDZIAK", "races": 4, "points": 9, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
+            "name": "LUKI PRZYBANDZIAK", "races": 4, "points": 8, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
         },
         {
-            "name": "MACIEK MARUCHA", "races": 4, "points": 13, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
+            "name": "MACIEK MARUCHA", "races": 4, "points": 9, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
         },
         {
-            "name": "PAWCIO ZASZYBKI", "races": 4, "points": 7, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
+            "name": "PAWCIO ZASZYBKI", "races": 4, "points": 6, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
         }
     ],
     "minorInfo": [
