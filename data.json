@@ -1,18 +1,34 @@
 {
     "players": [
-        {"name": "DZICCO PALTEGUMMI", "races": 0, "points": 0, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"},
-        {"name": "KRZYCHU MCQUEEN", "races": 0, "points": 0, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"},
-        {"name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 0, "points": 0, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"},
-        {"name": "CLINT PALSPRZĘGŁO", "races": 0, "points": 0, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"},
-        {"name": "LUKI PRZYBANDZIAK", "races": 0, "points": 0, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"},
-        {"name": "MACIEK MARUCHA", "races": 0, "points": 0, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"},
-        {"name": "PAWCIO ZASZYBKI", "races": 0, "points": 0, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"}
+        {
+            "name": "DZICCO PALTEGUMMI", "races": 4, "points": 14, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
+        },
+        {
+            "name": "KRZYCHU MCQUEEN", "races": 3, "points": 19, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
+        },
+        {
+            "name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 4, "points": 26, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"
+        },
+        {
+            "name": "CLINT PALSPRZĘGŁO", "races": 4, "points": 17, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
+        },
+        {
+            "name": "LUKI PRZYBANDZIAK", "races": 4, "points": 9, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
+        },
+        {
+            "name": "MACIEK MARUCHA", "races": 4, "points": 13, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
+        },
+        {
+            "name": "PAWCIO ZASZYBKI", "races": 4, "points": 7, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
+        }
     ],
     "minorInfo": [
         "Krzychson Hornet: Nie ważne na jakiej pozycji jedziesz, ważne na jakiej dojedziesz.",
-        "Patryk Pan Wójt Zawierucha: Czasami warto zwolnić, żeby potem przyspieszyć.",
         "Dzicco Paltegummi: Czas to pieniądz, a ja mam mało czasu.",
-        "Krzychson Hornet: Wszyscy kierowcy dawali dupy, tylko ja ciągnąłem."
+        "Krzychson Hornet: Wszyscy kierowcy dawali dupy, tylko ja ciągnąłem.",
+        "Pawcio Zaszybki jednak nie za szybki!",
+        "Pierwszy raz w historii nowy lider! Pan Wójt pójdzie po złoty tłok?",
+        "W środku tabeli tłok, kto to wykorzysta w następnych zawodach?"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
