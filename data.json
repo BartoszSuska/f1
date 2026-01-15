@@ -1,11 +1,11 @@
 {
     "players": [
-        {"name": "DZICCO PALTEGUMMI", "races": 31, "points": 111, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"},
-        {"name": "KRZYCHU MCQUEEN", "races": 28, "points": 112, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"},
-        {"name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 30, "points": 97, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"},
-        {"name": "CLINT PALSPRZĘGŁO", "races": 21, "points": 64, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"},
-        {"name": "LUKI PRZYBANDZIAK", "races": 31, "points": 51, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"},
-        {"name": "MACIEK MARUCHA", "races": 27, "points": 44, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"},
+        {"name": "DZICCO PALTEGUMMI", "races": 0, "points": 0, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"},
+        {"name": "KRZYCHU MCQUEEN", "races": 0, "points": 0, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"},
+        {"name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 0, "points": 0, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"},
+        {"name": "CLINT PALSPRZĘGŁO", "races": 0, "points": 0, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"},
+        {"name": "LUKI PRZYBANDZIAK", "races": 0, "points": 0, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"},
+        {"name": "MACIEK MARUCHA", "races": 0, "points": 0, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"},
         {"name": "PAWCIO ZASZYBKI", "races": 0, "points": 0, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"}
     ],
     "minorInfo": [
