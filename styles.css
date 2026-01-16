@@ -293,10 +293,13 @@ tr:last-child {
 
 .major-info-text{
   flex: 1;
-  font-size: 36px;
   font-weight: bold;
   font-style: italic;
   text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: clamp(12px, 2vw, 36px);
 }
 
 #muteBtn {

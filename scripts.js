@@ -94,5 +94,6 @@ fetch("data.json")
 
   function getRandomClip(){
     const video = clips[Math.floor(Math.random() * clips.length)];
-    document.getElementById("clip").src = video.file;
+    const clip = document.getElementById("clip").src = video.file;
+    clip.play();
   }
