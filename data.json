@@ -1,7 +1,7 @@
 {
     "players": [
         {
-            "name": "DZICCO PALTEGUMMI", "races": 4, "points": 10, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
+            "name": "DZICCO PALTEGUMMI", "races": 6, "points": 20, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
         },
         {
             "name": "KRZYCHU MCQUEEN", "races": 3, "points": 13, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
@@ -10,25 +10,22 @@
             "name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 4, "points": 19, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"
         },
         {
-            "name": "CLINT PALSPRZĘGŁO", "races": 4, "points": 12, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
+            "name": "CLINT PALSPRZĘGŁO", "races": 6, "points": 16, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
         },
         {
-            "name": "LUKI PRZYBANDZIAK", "races": 4, "points": 8, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
+            "name": "LUKI PRZYBANDZIAK", "races": 6, "points": 14, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
         },
         {
-            "name": "MACIEK MARUCHA", "races": 4, "points": 9, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
+            "name": "MACIEK MARUCHA", "races": 6, "points": 14, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
         },
         {
-            "name": "PAWCIO ZASZYBKI", "races": 4, "points": 6, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
+            "name": "PAWCIO ZASZYBKI", "races": 6, "points": 12, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
         }
     ],
     "minorInfo": [
-        "Krzychson Hornet: Nie ważne na jakiej pozycji jedziesz, ważne na jakiej dojedziesz.",
-        "Dzicco Paltegummi: Czas to pieniądz, a ja mam mało czasu.",
-        "Krzychson Hornet: Wszyscy kierowcy dawali dupy, tylko ja ciągnąłem.",
-        "Pawcio Zaszybki jednak nie za szybki!",
-        "Pierwszy raz w historii nowy lider! Pan Wójt pójdzie po złoty tłok?",
-        "W środku tabeli tłok, kto to wykorzysta w następnych zawodach?"
+        "Dzicco Paltegummi: Trasa jest jak życie, trzeba się rozpychać łokciami.",
+        "Clint rekord zniszcoznych aut! Czy ktoś majstrował przy jego Dodge'ach?",
+        "Luki Przybandziak od teraz to Luki Przymaciak - remis tych dwóch dżentelmenów!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
