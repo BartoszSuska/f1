@@ -130,7 +130,6 @@ fetch("data.json")
     // clipElement.src = nextClip.file;
     // clipElement.play();
     animateRandomClip();
-    saveNextRandomClip();
   }
 
 function animateRandomClip() {
