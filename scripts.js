@@ -135,7 +135,6 @@ fetch("data.json")
 
 function animateRandomClip() {
   console.log(nextClipElement.src);
-  nextClipElement.src = nextClip.file;
   //nextClipElement.play();
 
   clipElement.classList.add("clip-animated");
