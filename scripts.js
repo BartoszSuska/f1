@@ -134,6 +134,7 @@ fetch("data.json")
 
 function animateRandomClip() {
   console.log(nextClipElement.src);
+  const activeClipSrc = nextClip.file;
   //nextClipElement.play();
 
   clipElement.classList.add("clip-animated");
@@ -141,20 +142,22 @@ function animateRandomClip() {
   clipElement.classList.add("slide-out-right");
   nextClipElement.classList.add("slide-in-right");
 
-  setTimeout(() => {
-    clipElement.src = nextClipElement.src;
+    setTimeout(() => {
+      clipElement.src = activeClipSrc;
+      clipElement.load();
 
-    clipElement.onloadeddata = () => {
-      clipElement.classList.remove("clip-animated");
-      nextClipElement.classList.remove("clip-animated");
-      clipElement.classList.remove("slide-out-right");
-      nextClipElement.classList.remove("slide-in-right");
-    saveNextRandomClip();
+      clipElement.onloadeddata = () => {
+        clipElement.classList.remove("clip-animated");
+        nextClipElement.classList.remove("clip-animated");
+        clipElement.classList.remove("slide-out-right");
+        nextClipElement.classList.remove("slide-in-right");
+        saveNextRandomClip();
 
-    };
+      };
 
 
-  }, 250);
+    }, 250);
+
 }
 
 
