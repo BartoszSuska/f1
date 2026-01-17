@@ -118,7 +118,25 @@ fetch("data.json")
   }
 
   function playRandomClip(){
-    clipElement.src = nextClip.file;
-    clipElement.play();
+    // clipElement.src = nextClip.file;
+    // clipElement.play();
+    animateRandomClip();
     saveNextRandomClip();
+  }
+
+  function animateRandomClip(){
+    // fade out
+    clipElement.classList.add("fade-out");
+
+    // poczekaj 100ms (czas animacji fade)
+    setTimeout(() => {
+      clipElement.src = nextClip.file;
+      clipElement.play();
+
+      // fade in
+      clipElement.classList.remove("fade-out");
+
+      // przygotuj kolejny klip
+      saveNextRandomClip();
+    }, 100);
   }
