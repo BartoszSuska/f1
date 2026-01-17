@@ -10,7 +10,7 @@ fetch("data.json")
     initTable(players);
     initMinorInfo(minorInfo);
     saveNextRandomClip();
-    playRandomClip();
+    playFirstClip();
   });
 
   const nextBtn = document.querySelector(".next-button");
@@ -93,8 +93,8 @@ fetch("data.json")
     .map(({ value }) => value);
   }
 
-  const clipElement = document.getElementById("clip");
-  const nextClipElement = document.getElementById("nextClip");
+  const clipElement = document.querySelector(".clip");
+  const nextClipElement = document.querySelector(".nextClip");
   const autoplayButton = document.querySelector(".autoplay-toggle");
   let autoplayEnabled = false;
 
@@ -117,6 +117,15 @@ fetch("data.json")
     nextClipElement.load();
   }
 
+  function playFirstClip() {
+    // ustaw pierwszy klip normalnie, bez animacji
+    clipElement.src = nextClip.file;
+    clipElement.play();
+
+    // przygotuj kolejny klip
+    saveNextRandomClip();
+  }
+
   function playRandomClip(){
     // clipElement.src = nextClip.file;
     // clipElement.play();
@@ -124,19 +133,66 @@ fetch("data.json")
     saveNextRandomClip();
   }
 
-  function animateRandomClip(){
-    // fade out
-    clipElement.classList.add("fade-out");
+function animateRandomClip() {
+  console.log(nextClipElement.src);
+  nextClipElement.src = nextClip.file;
+  //nextClipElement.play();
 
-    // poczekaj 100ms (czas animacji fade)
-    setTimeout(() => {
-      clipElement.src = nextClip.file;
-      clipElement.play();
+  clipElement.classList.add("clip-animated");
+  nextClipElement.classList.add("clip-animated");
+  clipElement.classList.add("slide-out-right");
+  nextClipElement.classList.add("slide-in-right");
 
-      // fade in
-      clipElement.classList.remove("fade-out");
+  setTimeout(() => {
+    clipElement.src = nextClipElement.src;
 
-      // przygotuj kolejny klip
-      saveNextRandomClip();
-    }, 100);
-  }
+    clipElement.onloadeddata = () => {
+      clipElement.classList.remove("clip-animated");
+      nextClipElement.classList.remove("clip-animated");
+      clipElement.classList.remove("slide-out-right");
+      nextClipElement.classList.remove("slide-in-right");
+    saveNextRandomClip();
+
+    };
+
+
+  }, 250);
+}
+
+
+function animateRandomClip2() {
+  // przygotuj nextClipElement
+  nextClipElement.src = nextClip.file;
+  nextClipElement.style.display = "block";
+  nextClipElement.style.transform = "translateX(100%)";
+  nextClipElement.style.opacity = "1";
+  //nextClipElement.play();
+
+  // wymuś repaint, aby przeglądarka zauważyła transform
+  nextClipElement.getBoundingClientRect();
+
+  // animacja: obecny klip w lewo
+  clipElement.classList.add("slide-out-left");
+
+  // animacja: nowy klip wjeżdża
+  nextClipElement.classList.add("slide-in-right");
+
+  // po zakończeniu animacji
+  setTimeout(() => {
+    // clipElement przejmuje źródło nowego klipu
+    clipElement.src = nextClipElement.src;
+    clipElement.style.transform = "translateX(0)";
+    clipElement.style.opacity = "1";
+    clipElement.play();
+
+    // reset nextClipElement
+    nextClipElement.style.display = "none";
+    nextClipElement.classList.remove("slide-in-right");
+
+    // reset clipElement
+    clipElement.classList.remove("slide-out-left");
+
+    saveNextRandomClip();
+  }, 260); // trochę więcej niż czas transition
+}
+

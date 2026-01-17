@@ -38,15 +38,41 @@ body{
   flex-direction: column;
 }
 
-#clip{
+.video-wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
-  transition: opacity 0.1s ease;
+  overflow: hidden;
 }
 
-.fade-out {
+.clip, .nextClip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.clip{
+  transform: translateX(0);
+}
+
+.nextClip {
+  transform: translateX(-100%);
+}
+
+.nextClip.slide-in-right {
+  transform: translateX(0);
+}
+
+.clip-animated{
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.slide-out-right {
+  transform: translateX(100%);
   opacity: 0;
-  filter: blur(2px);
 }
 
 .clip-buttons{

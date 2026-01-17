@@ -22,8 +22,10 @@
             </table>
         </div>
         <div class="clips">
-            <video id="clip" autoplay muted controls preload="none"></video>
-            <video id="nextClip" style="display:none;"></video>
+            <div class="video-wrapper">
+                <video class="clip" autoplay muted controls preload="none"></video>
+                <video class="nextClip" muted preload="none"></video>
+            </div>
             <div class="clip-buttons">
                 <button class="trapezoid-button like-button">LIKE</button>
                 <button class="trapezoid-button autoplay-toggle">AUTOPLAY</button>
