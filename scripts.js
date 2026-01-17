@@ -93,7 +93,8 @@ fetch("data.json")
     .map(({ value }) => value);
   }
 
-  const clip = document.getElementById("clip");
+  const clipElement = document.getElementById("clip");
+  const nextClipElement = document.getElementById("nextClip");
   const autoplayButton = document.querySelector(".autoplay-toggle");
   let autoplayEnabled = false;
 
@@ -102,7 +103,7 @@ fetch("data.json")
     autoplayButton.classList.toggle("active", autoplayEnabled);
   });
 
-  clip.addEventListener("ended", () => {
+  clipElement.addEventListener("ended", () => {
     if (autoplayEnabled) {
         playRandomClip();
     }
@@ -112,10 +113,12 @@ fetch("data.json")
 
   function saveNextRandomClip(){
     nextClip = clips[Math.floor(Math.random() * clips.length)];
+    nextClipElement.src = nextClip.file;
+    nextClipElement.load();
   }
 
   function playRandomClip(){
-    clip.src = nextClip.file;
-    clip.play();
+    clipElement.src = nextClip.file;
+    clipElement.play();
     saveNextRandomClip();
   }
