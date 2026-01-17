@@ -99,6 +99,14 @@ body{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 }
 
+.autoplay-toggle {
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+}
+
+.autoplay-toggle.active {
+  background-color: #ff1e00;
+}
+
 .logo{
   width: 100%;
   margin-bottom: 20px;

@@ -9,12 +9,13 @@ fetch("data.json")
 
     initTable(players);
     initMinorInfo(minorInfo);
-    getRandomClip();
+    saveNextRandomClip();
+    playRandomClip();
   });
 
   const nextBtn = document.querySelector(".next-button");
   nextBtn.addEventListener("click", () => {
-    getRandomClip();
+    playRandomClip();
   });
 
   const audio = document.getElementById("bg-music");
@@ -92,8 +93,29 @@ fetch("data.json")
     .map(({ value }) => value);
   }
 
-  function getRandomClip(){
-    const video = clips[Math.floor(Math.random() * clips.length)];
-    const clip = document.getElementById("clip").src = video.file;
+  const clip = document.getElementById("clip");
+  const autoplayButton = document.querySelector(".autoplay-toggle");
+  let autoplayEnabled = false;
+
+  autoplayButton.addEventListener("click", () => {
+    autoplayEnabled = !autoplayEnabled;
+    autoplayButton.classList.toggle("active", autoplayEnabled);
+  });
+
+  clip.addEventListener("ended", () => {
+    if (autoplayEnabled) {
+        playRandomClip();
+    }
+  });
+
+  let nextClip = null;
+
+  function saveNextRandomClip(){
+    nextClip = clips[Math.floor(Math.random() * clips.length)];
+  }
+
+  function playRandomClip(){
+    clip.src = nextClip.file;
     clip.play();
+    saveNextRandomClip();
   }
