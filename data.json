@@ -1,10 +1,10 @@
 {
     "players": [
         {
-            "name": "DZICCO PALTEGUMMI", "races": 6, "points": 20, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
+            "name": "DZICCO PALTEGUMMI", "races": 9, "points": 33, "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
         },
         {
-            "name": "KRZYCHU MCQUEEN", "races": 3, "points": 13, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
+            "name": "KRZYCHU MCQUEEN", "races": 6, "points": 26, "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
         },
         {
             "name": "PATRYK PAN WÓJT ZAWIERUCHA", "races": 4, "points": 19, "image": "images/rudhini-happy.png", "color": "#14175E", "text": "#FFFFFF"
@@ -13,19 +13,19 @@
             "name": "CLINT PALSPRZĘGŁO", "races": 6, "points": 17, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
         },
         {
-            "name": "LUKI PRZYBANDZIAK", "races": 6, "points": 14, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
+            "name": "LUKI PRZYBANDZIAK", "races": 9, "points": 20, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
         },
         {
-            "name": "MACIEK MARUCHA", "races": 6, "points": 14, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
+            "name": "MACIEK MARUCHA", "races": 9, "points": 22, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
         },
         {
-            "name": "PAWCIO ZASZYBKI", "races": 6, "points": 12, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
+            "name": "PAWCIO ZASZYBKI", "races": 9, "points": 17, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
         }
     ],
     "minorInfo": [
-        "Dzicco Paltegummi: Trasa jest jak życie, trzeba się rozpychać łokciami.",
-        "Clint rekord zniszcoznych aut! Czy ktoś majstrował przy jego Dodge'ach?",
-        "Luki Przybandziak od teraz to Luki Przymaciak - remis tych dwóch dżentelmenów!"
+        "Marucha wyprzedza Lukiego! Najbardziej zażarte starcie turnieju dalej trwa!",
+        "Dzicco zbliża się do tytułu mistrza! Czy Krzychu ma jeszcze szansę?",
+        "Coraz lepsze start Pawcia! Debiutant kąsa przeciwników po piętach!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
@@ -252,7 +252,10 @@
         {"file": "clips/vid222.mp4"},
         {"file": "clips/vid223.mp4"},
         {"file": "clips/vid224.mp4"},
-        {"file": "clips/vid225.mp4"}
+        {"file": "clips/vid225.mp4"},
+        {"file": "clips/vid226.mp4"},
+        {"file": "clips/vid227.mp4"},
+        {"file": "clips/vid228.mp4"}
     ]
 
 }
