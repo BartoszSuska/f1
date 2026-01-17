@@ -44,7 +44,7 @@ fetch("data.json")
     const table = players.map(player => ({
         name: player.name,
         image: player.image,
-        score: ((player.points / player.races).toFixed(2)) * 100,
+        score: Math.trunc(((player.points / player.races).toFixed(2)) * 100),
         color: player.color,
         text: player.text
     })).sort((a, b) => b.score - a.score);
