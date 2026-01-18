@@ -4,10 +4,11 @@ fetch("data.json")
   .then(response => response.json())
   .then(data => {
     const players = data.players;
+    const events = data.events;
     const minorInfo = data.minorInfo;
     clips = data.clips;
 
-    initTable(players);
+    initTable(players, events);
     initMinorInfo(minorInfo);
     saveNextRandomClip();
     playFirstClip();
@@ -40,14 +41,48 @@ fetch("data.json")
     document.removeEventListener("click", unlockAudio);
   });
 
-  function initTable(players){
-    const table = players.map(player => ({
-        name: player.name,
-        image: player.image,
-        score: Math.trunc(((player.points / player.races).toFixed(2)) * 100),
-        color: player.color,
-        text: player.text
-    })).sort((a, b) => b.score - a.score);
+  function calculateOverallStats(players, events) {
+    const stats = {};
+
+    // inicjalizacja po playerId
+    players.forEach(player => {
+      stats[player.playerId] = {
+        points: 0,
+        races: 0
+      };
+    });
+
+    // sumowanie eventów
+    events.forEach(event => {
+      event.results.forEach(result => {
+        if (!stats[result.playerId]) return;
+
+        stats[result.playerId].points += result.points;
+        stats[result.playerId].races += result.races;
+      });
+    });
+
+    return stats;
+  }
+
+  function initTable(players, events) {
+    const stats = calculateOverallStats(players, events);
+
+    const table = players
+      .filter(player => stats[player.playerId].races > 0)
+      .map(player => {
+        const s = stats[player.playerId];
+        const avg = s.points / s.races;
+
+        return {
+          name: player.name,
+          image: player.image,
+          score: Math.trunc(Number(avg.toFixed(2)) * 100),
+          color: player.color,
+          text: player.text
+        };
+      })
+      .sort((a, b) => b.score - a.score);
 
     renderTable(table);
   }
