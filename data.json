@@ -57,12 +57,25 @@
                 {"playerId": 6, "points": 8, "races": 3},
                 {"playerId": 7, "points": 5, "races": 3}
             ]
+        },
+        {
+            "id": 4,
+            "name": "GP ABU ZABI",
+            "results": [
+                {"playerId": 1, "points": 8, "races": 3},
+                {"playerId": 2, "points": 9, "races": 3},
+                {"playerId": 3, "points": 10, "races": 3},
+                {"playerId": 4, "points": 8, "races": 3},
+                {"playerId": 5, "points": 5, "races": 3},
+                {"playerId": 6, "points": 10, "races": 3},
+                {"playerId": 7, "points": 10, "races": 3}
+            ]
         }
     ],
     "minorInfo": [
-        "Marucha wyprzedza Lukiego! Najbardziej zażarte starcie turnieju dalej trwa!",
-        "Dzicco zbliża się do tytułu mistrza! Czy Krzychu ma jeszcze szansę?",
-        "Coraz lepsze starty Pawcia! Debiutant kąsa przeciwników po piętach!"
+        "Pan Wójt, Zaszybki i Marucha! To oni najlepiej pojechali w Abu Zabi!",
+        "Fatalny start Przybandziaka! Czy on w ogóle wie jak się jedzie?",
+        "Kotłuje się w środku tabeli!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
