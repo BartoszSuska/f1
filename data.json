@@ -70,12 +70,25 @@
                 {"playerId": 6, "points": 10, "races": 3},
                 {"playerId": 7, "points": 10, "races": 3}
             ]
+        },
+        {
+            "id": 5,
+            "name": "GP DUBAI",
+            "results": [
+                {"playerId": 1, "points": 13, "races": 4},
+                {"playerId": 2, "points": 11, "races": 3},
+                {"playerId": 3, "points": 1, "races": 1},
+                {"playerId": 4, "points": 15, "races": 4},
+                {"playerId": 5, "points": 8, "races": 4},
+                {"playerId": 6, "points": 7, "races": 3},
+                {"playerId": 7, "points": 11, "races": 4}
+            ]
         }
     ],
     "minorInfo": [
-        "Pan Wójt, Zaszybki i Marucha! To oni najlepiej pojechali w Abu Zabi!",
-        "Fatalny start Przybandziaka! Czy on w ogóle wie jak się jedzie?",
-        "Kotłuje się w środku tabeli!"
+        "Karambol na moście w Dubaju! Nie żyje trzech kierowców. Czyżby Pan Wójt wiedział by dzisiaj nie startować?",
+        "Mcqueen znów wraca na zwycięskie tory! Jedynie wyścigówka wydaje się za szybka dla niego.",
+        "Terroryści w Dubaju czuli się jak w raju! Ilość wypadków przekroczyła wszelkie normy bezpieczeństwa."
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
