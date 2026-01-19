@@ -1,22 +1,21 @@
+let players = [];
+let events = [];
 let clips = [];
+let currentEventIndex;
 
 fetch("data.json")
   .then(response => response.json())
   .then(data => {
-    const players = data.players;
-    const events = data.events;
+    players = data.players;
+    events = data.events;
     const minorInfo = data.minorInfo;
     clips = data.clips;
 
-    initTable(players, events);
+    currentEventIndex = data.events.length - 1;
+    initTable(players, events, currentEventIndex);
     initMinorInfo(minorInfo);
     saveNextRandomClip();
     playFirstClip();
-  });
-
-  const nextBtn = document.querySelector(".next-button");
-  nextBtn.addEventListener("click", () => {
-    playRandomClip();
   });
 
   const audio = document.getElementById("bg-music");
@@ -41,7 +40,8 @@ fetch("data.json")
     document.removeEventListener("click", unlockAudio);
   });
 
-  function calculateOverallStats(players, events) {
+
+  function calculateOverallStats(players, events, eventIndex) {
     const stats = {};
 
     // inicjalizacja po playerId
@@ -53,20 +53,19 @@ fetch("data.json")
     });
 
     // sumowanie eventów
-    events.forEach(event => {
-      event.results.forEach(result => {
-        if (!stats[result.playerId]) return;
-
+    for (let i = 0; i <= eventIndex; i++) {
+      events[i].results.forEach(result => {
         stats[result.playerId].points += result.points;
         stats[result.playerId].races += result.races;
       });
-    });
+    }
 
     return stats;
   }
 
-  function initTable(players, events) {
-    const stats = calculateOverallStats(players, events);
+  //tworzenie tabeli
+  function initTable(players, events, eventIndex) {
+    const stats = calculateOverallStats(players, events, eventIndex);
 
     const table = players
       .filter(player => stats[player.playerId].races > 0)
@@ -85,15 +84,38 @@ fetch("data.json")
       .sort((a, b) => b.score - a.score);
 
     renderTable(table);
+    updateEventLabel(events, eventIndex);
   }
 
+  // aktualizacja etykiety wydarzenia
+  function updateEventLabel(events, eventIndex) {
+    const label = document.getElementById("eventLabel");
+    label.textContent = events[eventIndex].name;
+  }
+
+  function getRowPositions() {
+    const rows = document.querySelectorAll(".leaderboard tbody tr");
+    const positions = {};
+
+    rows.forEach(row => {
+      positions[row.dataset.playerId] = row.getBoundingClientRect().top;
+    });
+
+    return positions;
+  }
+
+
+  // renderowanie tabeli
   function renderTable(players){
     const tableBody = document.querySelector(".leaderboard tbody");
+    const oldPositions = getRowPositions();
     tableBody.innerHTML = "";
 
     players.forEach((player, index) => {
         const row = document.createElement("tr");
 
+        row.dataset.playerId = player.name;
+        
         row.innerHTML = `
             <td class="position">${index + 1}</td>
             <td class="driver" style="--driver-color: ${player.color}; --driver-text-color: ${player.text}">
@@ -107,6 +129,21 @@ fetch("data.json")
     });
   }
 
+  document.getElementById("prevEvent").addEventListener("click", () => {
+    if (currentEventIndex > 0) {
+      currentEventIndex--;
+      initTable(players, events, currentEventIndex);
+    }
+  });
+
+  document.getElementById("nextEvent").addEventListener("click", () => {
+    if (currentEventIndex < events.length - 1) {
+      currentEventIndex++;
+      initTable(players, events, currentEventIndex);
+    }
+  });
+
+  // tworzenie paska wiadomości
   function initMinorInfo(minorInfo){
     const track = document.querySelector(".minor-info-panel");
 
@@ -128,10 +165,16 @@ fetch("data.json")
     .map(({ value }) => value);
   }
 
+  // całość klipów
   const clipElement = document.querySelector(".clip");
   const nextClipElement = document.querySelector(".nextClip");
   const autoplayButton = document.querySelector(".autoplay-toggle");
   let autoplayEnabled = false;
+
+  const nextBtn = document.querySelector(".next-button");
+  nextBtn.addEventListener("click", () => {
+    playRandomClip();
+  });
 
   autoplayButton.addEventListener("click", () => {
     autoplayEnabled = !autoplayEnabled;
