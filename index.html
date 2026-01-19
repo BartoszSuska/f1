@@ -14,19 +14,16 @@
             <button id="muteBtn"><i class="fas fa-volume-up"></i></button>
         </div>
         <div class="standings">
-            <img class="logo" src="images/logo.jpg">
-            <table class="leaderboard">
-                <tbody>
-
-                </tbody>
-            </table>
+            <div class="leaderboard">
+                <!-- Leaderboard content will be inserted here -->
+            </div>
             <div class="event-navigation">
-                <button id="prevEvent" aria-label="Previous event">
-                    &#9664;
+                <button class="left-button trapezoid-button" id="prevEvent">
+                    PREV
                 </button>
-                <div id="eventLabel"></div>
-                <button id="nextEvent" aria-label="Next event">
-                    &#9654;
+                <div class="center-button trapezoid-button" id="eventLabel"></div>
+                <button class="right-button trapezoid-button" id="nextEvent">
+                    NEXT
                 </button>
             </div>
         </div>
@@ -36,9 +33,9 @@
                 <video class="nextClip" muted preload="none"></video>
             </div>
             <div class="clip-buttons">
-                <button class="trapezoid-button like-button">LIKE</button>
-                <button class="trapezoid-button autoplay-toggle">AUTOPLAY</button>
-                <button class="trapezoid-button next-button">NEXT</button>            
+                <button class="trapezoid-button left-button">LIKE</button>
+                <button class="autoplay-toggle trapezoid-button center-button">AUTOPLAY</button>
+                <button class="next-button trapezoid-button right-button">NEXT</button>            
             </div>
         </div>
     </div>

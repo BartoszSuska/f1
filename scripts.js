@@ -12,7 +12,9 @@ fetch("data.json")
     clips = data.clips;
 
     currentEventIndex = data.events.length - 1;
-    initTable(players, events, currentEventIndex);
+    const startingTable = initTable(players, events, currentEventIndex);
+    renderTable(startingTable);
+    refreshTable();
     initMinorInfo(minorInfo);
     saveNextRandomClip();
     playFirstClip();
@@ -74,6 +76,7 @@ fetch("data.json")
         const avg = s.points / s.races;
 
         return {
+          playerId: player.playerId,
           name: player.name,
           image: player.image,
           score: Math.trunc(Number(avg.toFixed(2)) * 100),
@@ -83,8 +86,8 @@ fetch("data.json")
       })
       .sort((a, b) => b.score - a.score);
 
-    renderTable(table);
     updateEventLabel(events, eventIndex);
+    return table;
   }
 
   // aktualizacja etykiety wydarzenia
@@ -104,42 +107,79 @@ fetch("data.json")
     return positions;
   }
 
-
   // renderowanie tabeli
-  function renderTable(players){
-    const tableBody = document.querySelector(".leaderboard tbody");
-    const oldPositions = getRowPositions();
-    tableBody.innerHTML = "";
+  function renderTable(players) {
+    const container = document.querySelector(".leaderboard");
+    container.innerHTML = "";
 
-    players.forEach((player, index) => {
-        const row = document.createElement("tr");
+    players.forEach(player => {
+      const row = document.createElement("div");
+      row.className = "leaderboard-row";
+      row.dataset.playerId = player.playerId;
 
-        row.dataset.playerId = player.name;
-        
-        row.innerHTML = `
-            <td class="position">${index + 1}</td>
-            <td class="driver" style="--driver-color: ${player.color}; --driver-text-color: ${player.text}">
-                <img src="${player.image}" alt="img">
-                <span>${player.name}</span>
-            </td>
-            <td class="score">${player.score}</td>
-        `;
+      row.innerHTML = `
+        <div class="leaderboard-cell position"></div>
+        <div class="leaderboard-cell driver"
+            style="--driver-color:${player.color}; --driver-text-color:${player.text}">
+          <img src="${player.image}">
+          <span class="name">${player.name}</span>
+        </div>
+        <div class="leaderboard-cell score"></div>
+      `;
 
-        tableBody.appendChild(row);
+      container.appendChild(row);
     });
+  }
+
+  // aktualizacja tabeli z animacją
+  function updateTable(calculated) {
+    const container = document.querySelector(".leaderboard");
+    const rows = [...container.children];
+
+    const oldPositions = {};
+    rows.forEach(row => {
+      oldPositions[row.dataset.playerId] = row.getBoundingClientRect().top;
+    });
+
+    // 1️⃣ ustaw nową kolejność w DOM
+    calculated.forEach((item, index) => {
+      const row = rows.find(r => r.dataset.playerId == item.playerId);
+      row.querySelector(".position").textContent = index + 1;
+      row.querySelector(".score").textContent = item.score;
+      container.appendChild(row);
+    });
+
+    // 2️⃣ animacja FLIP
+    rows.forEach(row => {
+      const oldTop = oldPositions[row.dataset.playerId];
+      const newTop = row.getBoundingClientRect().top;
+      const delta = oldTop - newTop;
+
+      if (delta) {
+        row.style.transform = `translateY(${delta}px)`;
+        row.offsetHeight;
+        row.style.transform = "";
+      }
+    });
+  }
+
+  function refreshTable() {
+    const newTable = initTable(players, events, currentEventIndex);
+    updateTable(newTable);
+    updateEventLabel(events, currentEventIndex);
   }
 
   document.getElementById("prevEvent").addEventListener("click", () => {
     if (currentEventIndex > 0) {
       currentEventIndex--;
-      initTable(players, events, currentEventIndex);
+      refreshTable();
     }
   });
 
   document.getElementById("nextEvent").addEventListener("click", () => {
     if (currentEventIndex < events.length - 1) {
       currentEventIndex++;
-      initTable(players, events, currentEventIndex);
+      refreshTable();
     }
   });
 

@@ -95,7 +95,7 @@ body{
   padding: 0;
   transition: background 0.3s;
   flex: 1;
-
+  
   color: white;
   font-family: 'f1', sans-serif;
   font-style: italic;
@@ -123,19 +123,19 @@ body{
   transform: translateX(100%) skewX(-20deg);
 }
 
-.like-button {
+.left-button {
   clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
 }
 
-.next-button {
+.right-button {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 }
 
-.autoplay-toggle {
+.center-button {
   clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
 }
 
-.autoplay-toggle.active {
+.center-button.active {
   background-color: #ff1e00;
 }
 
@@ -186,7 +186,14 @@ table {
   background-color: #15151F;
 }
 
-td {
+.leaderboard-row {
+  border-bottom: 1px solid white;
+  display: flex;
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.leaderboard-cell {
   height: 50px;
   padding: 0 1em;
   display: flex;
@@ -194,14 +201,25 @@ td {
   text-align: center;
 }
 
-tr{
-  border-bottom: 1px solid white;
+.leaderboard-row:last-child {
+  border-bottom: none;
+}
+
+.event-navigation{
   display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 10px;
   width: 100%;
 }
 
-tr:last-child {
-  border-bottom: none;
+#eventLabel{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  pointer-events: none;
 }
 
 .footer{
