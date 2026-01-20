@@ -18,28 +18,65 @@ fetch("data.json")
     initMinorInfo(minorInfo);
     saveNextRandomClip();
     playFirstClip();
+    initVolume();
   });
 
   const audio = document.getElementById("bg-music");
   const muteBtn = document.getElementById("muteBtn");
   const icon = muteBtn.querySelector("i");
-  
+  const volumeSlider = document.getElementById("volumeSlider");
+
+  function initVolume() {
+    volumeSlider.value = audio.volume;
+    updateSliderFill();
+  }
+
+  function updateSliderFill() {
+    const value = volumeSlider.value * 100;
+    volumeSlider.style.background = `
+      linear-gradient(
+        to right,
+        #ff1e00 ${value}%,
+        #5c5c5c80 ${value}%
+      )
+    `;
+  }
+
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+    updateSliderFill();
+    updateIcon();
+  });
+ 
   muteBtn.addEventListener("click", () => {
     audio.muted = !audio.muted;
-    if (audio.muted) {
+
+    if (audio.volume === 0) {
+      audio.volume = 0.25;
+      volumeSlider.value = 0.25;
+      audio.muted = !audio.muted;
+      updateSliderFill();
+    }
+
+    updateIcon();
+  });
+
+  function updateIcon() {
+    if (audio.muted || audio.volume === 0) {
       icon.classList.remove("fa-volume-up");
       icon.classList.add("fa-volume-xmark");
     } else {
       icon.classList.remove("fa-volume-xmark");
       icon.classList.add("fa-volume-up");
     }
-  });
+  }
 
   document.addEventListener("click", function unlockAudio() {
     audio.muted = false;
-    audio.volume = 0.5;
+    audio.volume = 0.25;
     audio.play();
     document.removeEventListener("click", unlockAudio);
+    initVolume();
   });
 
 

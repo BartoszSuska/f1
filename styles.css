@@ -360,19 +360,24 @@ table {
   font-size: clamp(12px, 2vw, 36px);
 }
 
-#muteBtn {
-  position: fixed;      /* floating w prawym górnym rogu */
+.volume-control {
+  position: fixed;
   top: 10px;
   right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 9999;
+}
+
+#muteBtn {
   width: 50px;
   height: 50px;
-  border-radius: 50%;   /* koło */
+  border-radius: 50%;
   border: none;
   background-color: #5c5c5c80;
   color: white;
   font-size: 24px;
   cursor: pointer;
-  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -382,4 +387,41 @@ table {
 #muteBtn:hover {
   background-color: #ff1e00;
   box-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0); /* efekt glow */
+}
+
+#volumeSlider {
+  -webkit-appearance: none;
+  width: 100px;
+  height: 6px;
+    background: linear-gradient(
+    to right,
+    #ff1e00 100%,
+    #5c5c5c80 0%
+  );
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+/* thumb */
+#volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff1e00;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+/* glow na hover */
+.volume-control:hover #volumeSlider {
+  box-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0);
+}
+
+/* POKAŻ SLIDER NA HOVER */
+.volume-control:hover #volumeSlider {
+  opacity: 1;
+  pointer-events: auto;
 }
