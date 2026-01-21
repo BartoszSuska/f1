@@ -158,6 +158,13 @@ body{
   font-size: 1.35em;
   flex: 1;
   text-wrap: nowrap;
+  position: relative;
+}
+
+.leaderboard-cell.driver.panther {
+  background-image: url("images/panther.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .driver img{
@@ -165,6 +172,25 @@ body{
   width: 60px;
   object-fit: cover;
   display: block;
+}
+
+@keyframes blinkFadeHold {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.25;
+  }
+  80% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink-active {
+  animation: blinkFadeHold 7s ease-in-out forwards;
 }
 
 .score{

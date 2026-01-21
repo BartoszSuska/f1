@@ -13,13 +13,13 @@
             "playerId": 4, "name": "CLINT PALSPRZĘGŁO", "races": 6, "points": 17, "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
         },
         {
-            "playerId": 5, "name": "LUKI PRZYBANDZIAK", "races": 9, "points": 20, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
+            "playerId": 5, "name": "LUKI PRZYBANDZIAK - GOLFIARZ", "races": 9, "points": 20, "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
         },
         {
             "playerId": 6, "name": "MACIEK MARUCHA", "races": 9, "points": 22, "image": "images/maciek.png", "color": "#00E802", "text": "#000000"
         },
         {
-            "playerId": 7, "name": "PAWCIO ZASZYBKI", "races": 9, "points": 17, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
+            "playerId": 7, "name": "PAWCIO ZASZYBKI - GOLFIARZ", "races": 9, "points": 17, "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
         }
     ],
     "events": [

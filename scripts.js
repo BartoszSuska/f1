@@ -14,6 +14,7 @@ fetch("data.json")
     currentEventIndex = data.events.length - 1;
     const startingTable = initTable(players, events, currentEventIndex);
     renderTable(startingTable);
+    startRandomBlinking();
     refreshTable();
     initMinorInfo(minorInfo);
     saveNextRandomClip();
@@ -153,12 +154,14 @@ fetch("data.json")
       const row = document.createElement("div");
       row.className = "leaderboard-row";
       row.dataset.playerId = player.playerId;
+      const isPanther = player.playerId === 1;
+      const isKrzychu = player.playerId === 2;
 
       row.innerHTML = `
         <div class="leaderboard-cell position"></div>
-        <div class="leaderboard-cell driver"
+        <div class="leaderboard-cell driver ${isPanther ? "panther" : ""}"
             style="--driver-color:${player.color}; --driver-text-color:${player.text}">
-          <img src="${player.image}">
+          <img src="${player.image}" class="${isKrzychu ? "blinking" : ""}"/>
           <span class="name">${player.name}</span>
         </div>
         <div class="leaderboard-cell score"></div>
@@ -219,6 +222,31 @@ fetch("data.json")
       refreshTable();
     }
   });
+
+  // znikanie Krzycha
+  function startRandomBlinking() {
+    const blinkingImages = document.querySelectorAll("img.blinking");
+
+    blinkingImages.forEach(img => {
+      const blink = () => {
+        img.classList.add("blink-active");
+
+        setTimeout(() => {
+          img.classList.remove("blink-active");
+
+          const nextBlink =
+            Math.random() * (60000 - 10000) + 10000; // 10–60s
+
+          setTimeout(blink, nextBlink);
+        }, 7000); // czas trwania animacji
+      };
+
+      const firstBlink =
+        Math.random() * (60000 - 10000) + 10000;
+
+      setTimeout(blink, firstBlink);
+    });
+  }
 
   // tworzenie paska wiadomości
   function initMinorInfo(minorInfo){
