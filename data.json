@@ -77,6 +77,7 @@
             "results": [
                 {"playerId": 1, "points": 13, "races": 4},
                 {"playerId": 2, "points": 11, "races": 4},
+                {"playerId": 3, "points": 1, "races": 1},
                 {"playerId": 4, "points": 15, "races": 4},
                 {"playerId": 5, "points": 8, "races": 4},
                 {"playerId": 6, "points": 7, "races": 4},
