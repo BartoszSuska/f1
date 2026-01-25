@@ -95,13 +95,25 @@
                 {"playerId": 6, "points": 10, "races": 4},
                 {"playerId": 7, "points": 7, "races": 4}
             ]
+        },
+        {
+            "id": 7,
+            "name": "GP ASIA",
+            "results": [
+                {"playerId": 1, "points": 10, "races": 3},
+                {"playerId": 2, "points": 7, "races": 2},
+                {"playerId": 3, "points": 8, "races": 3},
+                {"playerId": 4, "points": 10, "races": 3},
+                {"playerId": 5, "points": 4, "races": 3},
+                {"playerId": 6, "points": 8, "races": 3},
+                {"playerId": 7, "points": 12, "races": 3}
+            ]
         }
     ],
     "minorInfo": [
-        "Powrót do poziomu czwartego aut! Zakończył się tak jak wszyscy się spodziewali - wieloma kraksami.",
-        "Umarł Dzicco Paltegummi - narodził się Lampardzicco Paltegummi!",
-        "Czikago dało wiele emocji! Zacięte walki w mieście okazały się brutalną weryfikacją jakości opon.",
-        "Luki Przybandziak zanotował serie 3 ostatnich miejsc! Gratulujemy wyróżnienia!"
+        "Krzychu Mcqueen zagotowany niczym wulkan ale wciąż zdobywa punkty! Słuszna reakcja na zachowanie oponentów czy jednak przesada?",
+        "Luki Przybandziak z fantastycznym wynikiem! 4 punkty w 3 wyścigach! To jego najlepszy wynik w sezonie!",
+        "Pan Wójt znów nie wykorzystał swojej szansy! Sezon dobiega końca a on wciąż goni!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
