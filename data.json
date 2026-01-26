@@ -108,12 +108,24 @@
                 {"playerId": 6, "points": 8, "races": 3},
                 {"playerId": 7, "points": 12, "races": 3}
             ]
+        },
+        {
+            "id": 8,
+            "name": "GP PARIS",
+            "results": [
+                {"playerId": 1, "points": 7, "races": 3},
+                {"playerId": 3, "points": 9, "races": 3},
+                {"playerId": 4, "points": 8, "races": 3},
+                {"playerId": 5, "points": 6, "races": 3},
+                {"playerId": 6, "points": 8, "races": 2},
+                {"playerId": 7, "points": 9, "races": 3}
+            ]
         }
     ],
     "minorInfo": [
-        "Krzychu Mcqueen zagotowany niczym wulkan ale wciąż zdobywa punkty! Słuszna reakcja na zachowanie oponentów czy jednak przesada?",
-        "Luki Przybandziak z fantastycznym wynikiem! 4 punkty w 3 wyścigach! To jego najlepszy wynik w sezonie!",
-        "Pan Wójt znów nie wykorzystał swojej szansy! Sezon dobiega końca a on wciąż goni!"
+        "Wyścig w Paryżu okrzyknięty rajdem dżentelmenów! Nikt nie odważył się na ryzykowne manewry.",
+        "Zdradzieckie barierki na moście! Ilość wypadków w tym miejscu była przerażająca!",
+        "Równe starty wszystkich uczestników! Wielka rzadkość w historii wyścigów."
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
