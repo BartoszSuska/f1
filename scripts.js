@@ -1,18 +1,20 @@
 let players = [];
-let events = [];
+let seasons = [];
 let clips = [];
 let currentEventIndex;
+let currentSeasonIndex;
 
 fetch("data.json")
   .then(response => response.json())
   .then(data => {
     players = data.players;
-    events = data.events;
+    seasons = data.seasons;
     const minorInfo = data.minorInfo;
     clips = data.clips;
 
-    currentEventIndex = data.events.length - 1;
-    const startingTable = initTable(players, events, currentEventIndex);
+    currentSeasonIndex = data.seasons.length - 1;
+    currentEventIndex = seasons[currentSeasonIndex].events.length - 1;
+    const startingTable = initTable(players, seasons[currentSeasonIndex], currentEventIndex);
     renderTable(startingTable);
     startRandomBlinking();
     refreshTable();
@@ -81,8 +83,9 @@ fetch("data.json")
   });
 
 
-  function calculateOverallStats(players, events, eventIndex) {
+  function calculateOverallStats(players, season, eventIndex) {
     const stats = {};
+    console.log(season.name + " - event index: " + eventIndex);
 
     // inicjalizacja po playerId
     players.forEach(player => {
@@ -94,7 +97,7 @@ fetch("data.json")
 
     // sumowanie eventów
     for (let i = 0; i <= eventIndex; i++) {
-      events[i].results.forEach(result => {
+      season.events[i].results.forEach(result => {
         stats[result.playerId].points += result.points;
         stats[result.playerId].races += result.races;
       });
@@ -104,14 +107,12 @@ fetch("data.json")
   }
 
   //tworzenie tabeli
-  function initTable(players, events, eventIndex) {
-    const stats = calculateOverallStats(players, events, eventIndex);
-
+  function initTable(players, season, eventIndex) {
+    const stats = calculateOverallStats(players, season, eventIndex);
     const table = players
-      .filter(player => stats[player.playerId].races > 0)
       .map(player => {
         const s = stats[player.playerId];
-        const avg = s.points / s.races;
+        const avg = s.races > 0 ? s.points / s.races : 0;
 
         return {
           playerId: player.playerId,
@@ -124,14 +125,21 @@ fetch("data.json")
       })
       .sort((a, b) => b.score - a.score);
 
-    updateEventLabel(events, eventIndex);
+    const event = season.events[currentEventIndex];
+    updateEventLabel(event.name);
+    updateSeasonLabel(season.name);
     return table;
   }
 
   // aktualizacja etykiety wydarzenia
-  function updateEventLabel(events, eventIndex) {
+  function updateEventLabel(eventName) {
     const label = document.getElementById("eventLabel");
-    label.textContent = events[eventIndex].name;
+    label.textContent = eventName;
+  }
+
+  function updateSeasonLabel(seasonName) {
+    const label = document.getElementById("seasonLabel");
+    label.textContent = seasonName;
   }
 
   function getRowPositions() {
@@ -181,46 +189,66 @@ fetch("data.json")
       oldPositions[row.dataset.playerId] = row.getBoundingClientRect().top;
     });
 
-    // 1️⃣ ustaw nową kolejność w DOM
+    // ustaw nową kolejność w DOM
+    let lastScore = null;
+    let lastPosition = 0;
+
     calculated.forEach((item, index) => {
       const row = rows.find(r => r.dataset.playerId == item.playerId);
-      row.querySelector(".position").textContent = index + 1;
-      row.querySelector(".score").textContent = item.score;
+
+      let position;
+      if (item.score === lastScore) {
+        position = lastPosition;
+      } else {
+        position = index + 1;
+      }
+
+      row.querySelector(".position").textContent = position;
+      row.querySelector(".score").textContent = item.races === 0 ? "—" : item.score;
+
+      lastScore = item.score;
+      lastPosition = position;
+
       container.appendChild(row);
     });
 
-    // 2️⃣ animacja FLIP
-    rows.forEach(row => {
-      const oldTop = oldPositions[row.dataset.playerId];
-      const newTop = row.getBoundingClientRect().top;
-      const delta = oldTop - newTop;
 
-      if (delta) {
-        row.style.transform = `translateY(${delta}px)`;
-        row.offsetHeight;
-        row.style.transform = "";
-      }
-    });
   }
 
   function refreshTable() {
-    const newTable = initTable(players, events, currentEventIndex);
+    const season = seasons[currentSeasonIndex];
+    const event = season.events[currentEventIndex];
+
+    const newTable = initTable(players, season, currentEventIndex);
     updateTable(newTable);
-    updateEventLabel(events, currentEventIndex);
+    updateEventLabel(event.name);
+    updateSeasonLabel(season.name);
   }
 
+  //zmiana eventów
   document.getElementById("prevEvent").addEventListener("click", () => {
     if (currentEventIndex > 0) {
       currentEventIndex--;
-      refreshTable();
     }
+    else if (currentSeasonIndex > 0){
+      currentSeasonIndex--;
+      currentEventIndex = seasons[currentSeasonIndex].events.length - 1;
+    }
+
+    refreshTable();
   });
 
   document.getElementById("nextEvent").addEventListener("click", () => {
-    if (currentEventIndex < events.length - 1) {
+    const season = seasons[currentSeasonIndex];
+    if (currentEventIndex < season.events.length - 1) {
       currentEventIndex++;
-      refreshTable();
     }
+    else if(currentSeasonIndex < seasons.length -1){
+      currentSeasonIndex++;
+      currentEventIndex = 0;
+    }
+    
+    refreshTable();
   });
 
   // znikanie Krzycha
