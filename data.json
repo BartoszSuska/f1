@@ -164,13 +164,32 @@
                     ]
                 }
             ]
+        },
+        {
+            "seasonId": 4,
+            "name": "SEZON 3",
+            "events": [
+                {
+                    "id": 1,
+                    "name": "OPENING EVENT",
+                    "results": [
+                        {"playerId": 1, "points": 14, "races": 4},
+                        {"playerId": 2, "points": 16, "races": 4},
+                        {"playerId": 3, "points": 10, "races": 4},
+                        {"playerId": 4, "points": 8, "races": 4},
+                        {"playerId": 5, "points": 6, "races": 4},
+                        {"playerId": 6, "points": 11, "races": 4},
+                        {"playerId": 7, "points": 14, "races": 4}
+                    ]
+                }
+            ]
         }
     ],
     
     "minorInfo": [
-        "Turniej przedsezonowy zakończony! Remis na szczycie tabeli między Panem Wójtem a Palspreżgłem! Czy to może zwiastować nowych liderów przyszłego sezonu?",
-        "Zespół Maruchy postanowił zrezygnować z udziału z pucharu Krzychsona Horneta! Brak czasu czy może chęć ukrycia asów w rękawie na przyszły sezon?",
-        "Wyrównane starty pokazały, że w przyszłym sezonie każdy będzie mógł zawalczyć o złoty tłok! Kto według Was ma największe szanse na zwycięstwo?"
+        "Inwestycja Arabskich Szejków w Pawcia Zaszybkiego zaczyna przynosić efekty! Czyżbyśmy byli świadkami narodzin nowej gwiazdy wyścigów?",
+        "Wiemy już czemu Maruchy nie było na turnieju przedsezonowym! Okazało się, że trenował w tajemnicy na specjalnej sali od MMA!",
+        "McGrzyb zaczyna z grubego G! Ale czy dociągnię to przez cały sezon?"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
