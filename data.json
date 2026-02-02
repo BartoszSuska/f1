@@ -1,25 +1,25 @@
 {
     "players": [
         {
-            "playerId": 1, "name": "DZICCO PALTEGUMMI", "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF"
+            "playerId": 1, "name": "DZICCO PALTEGUMMI", "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF", "seasonsWon": 0, "cupsWon": 0
         },
         {
-            "playerId": 2, "name": "ZYGZAK MCGRZYB", "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF"
+            "playerId": 2, "name": "ZYGZAK MCGRZYB", "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF", "seasonsWon": 2, "cupsWon": 0
         },
         {
-            "playerId": 3, "name": "PATRYK PAN WÓJT ZAWIERUCHA", "image": "images/rudhini-sad.png", "color": "#14175E", "text": "#FFFFFF"
+            "playerId": 3, "name": "PATRYK PAN WÓJT ZAWIERUCHA", "image": "images/rudhini-sad.png", "color": "#14175E", "text": "#FFFFFF", "seasonsWon": 0, "cupsWon": 1
         },
         {
-            "playerId": 4, "name": "CLINT PALSPRZĘGŁO", "image": "images/clint.png", "color": "#00F6D2", "text": "#000000"
+            "playerId": 4, "name": "CLINT PALSPRZĘGŁO", "image": "images/clint.png", "color": "#00F6D2", "text": "#000000", "seasonsWon": 0, "cupsWon": 1
         },
         {
-            "playerId": 5, "name": "LUKI PRZYBANDZIAK - GOLFIARZ", "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000"
+            "playerId": 5, "name": "LUKI PRZYBANDZIAK - GOLFIARZ", "image": "images/luki.png", "color": "#FFFFFF", "text": "#000000", "seasonsWon": 0, "cupsWon": 0
         },
         {
-            "playerId": 6, "name": "MACIEK MARUCHA","image": "images/maciek.png", "color": "#00E802", "text": "#000000"
+            "playerId": 6, "name": "MACIEK MARUCHA","image": "images/maciek.png", "color": "#00E802", "text": "#000000", "seasonsWon": 0, "cupsWon": 0
         },
         {
-            "playerId": 7, "name": "PAWCIO ZASZYBKI - GOLFIARZ", "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF"
+            "playerId": 7, "name": "PAWCIO ZASZYBKI - GOLFIARZ", "image": "images/pawcio.png", "color": "#229971", "text": "#FFFFFF", "seasonsWon": 0, "cupsWon": 0
         }
     ],
     "seasons": [

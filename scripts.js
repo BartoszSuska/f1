@@ -120,7 +120,9 @@ fetch("data.json")
           image: player.image,
           score: Math.trunc(Number(avg.toFixed(2)) * 100),
           color: player.color,
-          text: player.text
+          text: player.text,
+          seasonsWon: player.seasonsWon,
+          cupsWon: player.cupsWon,
         };
       })
       .sort((a, b) => b.score - a.score);
@@ -165,12 +167,15 @@ fetch("data.json")
       const isPanther = player.playerId === 1;
       const isKrzychu = player.playerId === 2;
 
+      const seasonsWon = player.seasonsWon > 0 ? `<span class="trophies"> ${'<i class="fa-solid fa-medal"></i>'.repeat(player.seasonsWon)} </span>`: "";
+      const cupsWon = player.cupsWon > 0 ? `<span class="trophies"> ${'<i class="fa-solid fa-trophy"></i>'.repeat(player.cupsWon)} </span>`: "";
+
       row.innerHTML = `
         <div class="leaderboard-cell position"></div>
         <div class="leaderboard-cell driver ${isPanther ? "panther" : ""}"
             style="--driver-color:${player.color}; --driver-text-color:${player.text}">
           <img src="${player.image}" class="${isKrzychu ? "blinking" : ""}"/>
-          <span class="name">${player.name}</span>
+          <span class="name">${player.name} ${seasonsWon} ${cupsWon}</span>
         </div>
         <div class="leaderboard-cell score"></div>
       `;
