@@ -181,15 +181,26 @@
                         {"playerId": 6, "points": 11, "races": 4},
                         {"playerId": 7, "points": 14, "races": 4}
                     ]
+                },
+                {
+                    "id": 2,
+                    "name": "GP 2",
+                    "results": [
+                        {"playerId": 1, "points": 13, "races": 3},
+                        {"playerId": 2, "points": 14, "races": 3},
+                        {"playerId": 4, "points": 11, "races": 3},
+                        {"playerId": 5, "points": 4, "races": 3},
+                        {"playerId": 7, "points": 5, "races": 3}
+                    ]
                 }
             ]
         }
     ],
     
     "minorInfo": [
-        "Inwestycja Arabskich Szejków w Pawcia Zaszybkiego zaczyna przynosić efekty! Czyżbyśmy byli świadkami narodzin nowej gwiazdy wyścigów?",
-        "Wiemy już czemu Maruchy nie było na turnieju przedsezonowym! Okazało się, że trenował w tajemnicy na specjalnej sali od MMA!",
-        "McGrzyb zaczyna z grubego G! Ale czy dociągnię to przez cały sezon?"
+        "Zacięty pojedynek Lampardzicco z Przybandziakiem! Zwycięski Paltegummi dalej musi gonić McGrzyba w klasyfikacji generalnej!",
+        "Sabotaż w ekipie Maruchy! Pompy paliwowe zamarzły i nie pozwoliły mu na walkę o podium! Czyżby pierwszy wyścig sezonu narobił mu więcej wrogów niż fanów?",
+        "Po śweietnym starcie Pawcio Zaszybki teraz wyrównuje do poziomu z sezonu 2! Fatalna dyspozycja!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
