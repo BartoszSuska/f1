@@ -203,15 +203,26 @@
                         {"playerId": 5, "points": 4, "races": 3},
                         {"playerId": 7, "points": 9, "races": 3} 
                     ]
+                },
+                {
+                    "id": 4,
+                    "name": "GP 4",
+                    "results": [
+                        {"playerId": 1, "points": 8, "races": 3},
+                        {"playerId": 3, "points": 10, "races": 3},
+                        {"playerId": 4, "points": 14, "races": 3},
+                        {"playerId": 5, "points": 8, "races": 3},
+                        {"playerId": 7, "points": 8, "races": 3}
+                    ]
                 }
             ]
         }
     ],
     
     "minorInfo": [
-        "Zygzak McGrzyb bez wygranego wyścigu! Piekło zamarzło?",
-        "Dalsze problemy z ekipą Maruchy - Maciek nie startuje od dwóch wyścigów, ale gdzie podziewa się Pan Wójt? Przygotowuje się do powrotu?",
-        "Lampardzicco Paltegummi z fenomenalną serią punktową! 13 punktów w 3 startach! Rywalizacja o złoto będzie w tym sezonie zaciekła!"
+        "STAŁO SIĘ! Przybandziak triumfuję nad Lazurowym Wybrzeżem! Po 73 wyścigach, 126 punktach i 2 sezonach bez zwycięstwa, Luki Przybandziak zdobywa swoje pierwsze złoto! Gratulacje!",
+        "Clint Palszprzęgło z fenomenalnymi startami kończy 2 razy na podium i realnie angażuję się w walkę o tytuł! Czy to będzie jego sezon? Zobaczymy!",
+        "Równa forma wszystkich kierowców zaowocowała bardzo wyrównanym wyścigiem! Kibice nie mogą się doczekać powrotu Maruchy który jak twierdzą - doda do wyścigów trochę niekontrolowanego chaosu!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
