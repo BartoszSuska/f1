@@ -214,15 +214,27 @@
                         {"playerId": 5, "points": 8, "races": 3},
                         {"playerId": 7, "points": 8, "races": 3}
                     ]
+                },
+                {
+                    "id": 5,
+                    "name": "GP 5",
+                    "results": [
+                        {"playerId": 1, "points": 10, "races": 3},
+                        {"playerId": 2, "points": 11, "races": 3},
+                        {"playerId": 3, "points": 5, "races": 3},
+                        {"playerId": 4, "points": 10, "races": 3},
+                        {"playerId": 5, "points": 5, "races": 3},
+                        {"playerId": 7, "points": 10, "races": 3}
+                    ]
                 }
             ]
         }
     ],
     
     "minorInfo": [
-        "STAŁO SIĘ! Przybandziak triumfuję nad Lazurowym Wybrzeżem! Po 73 wyścigach, 126 punktach i 2 sezonach bez zwycięstwa, Luki Przybandziak zdobywa swoje pierwsze złoto! Gratulacje!",
-        "Clint Palszprzęgło z fenomenalnymi startami kończy 2 razy na podium i realnie angażuję się w walkę o tytuł! Czy to będzie jego sezon? Zobaczymy!",
-        "Równa forma wszystkich kierowców zaowocowała bardzo wyrównanym wyścigiem! Kibice nie mogą się doczekać powrotu Maruchy który jak twierdzą - doda do wyścigów trochę niekontrolowanego chaosu!"
+        "Pan Wójt to szuja! Po raz kolejny udowodnił, że potrafi zaskoczyć wszystkich i być większą mendą niż poprzednio!",
+        "Patryk Pan Wójt Zawierucha zdobywa nagrode śmiecia sezonu już w połowie sezonu! Gratulacje, spodziewaj się rzeźby z cobla pod domem!",
+        "Zawierucha zrobił zawieruchę i wywiało go spoza następnych zawodów! Sędziowie jednogłośni, ban dla tego pajaca!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
