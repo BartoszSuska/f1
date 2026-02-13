@@ -226,6 +226,18 @@
                         {"playerId": 5, "points": 5, "races": 3},
                         {"playerId": 7, "points": 10, "races": 3}
                     ]
+                },
+                {
+                    "id": 6,
+                    "name": "GP 6",
+                    "results": [
+                        {"playerId": 1, "points": 12, "races": 3},
+                        {"playerId": 2, "points": 13, "races": 3},
+                        {"playerId": 3, "points": 6, "races": 3},
+                        {"playerId": 4, "points": 7, "races": 3},
+                        {"playerId": 5, "points": 6, "races": 3},
+                        {"playerId": 7, "points": 8, "races": 3}
+                    ]
                 }
             ]
         }
