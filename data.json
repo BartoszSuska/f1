@@ -238,6 +238,17 @@
                         {"playerId": 5, "points": 6, "races": 3},
                         {"playerId": 7, "points": 8, "races": 3}
                     ]
+                },
+                {
+                    "id": 7,
+                    "name": "GP 7",
+                    "results": [
+                        {"playerId": 1, "points": 13, "races": 4},
+                        {"playerId": 2, "points": 19, "races": 4},
+                        {"playerId": 3, "points": 16, "races": 4},
+                        {"playerId": 5, "points": 4, "races": 4},
+                        {"playerId": 7, "points": 9, "races": 4}
+                    ]
                 }
             ]
         }
