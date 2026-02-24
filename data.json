@@ -249,15 +249,28 @@
                         {"playerId": 5, "points": 4, "races": 4},
                         {"playerId": 7, "points": 9, "races": 4}
                     ]
+                },
+                {
+                    "id": 8,
+                    "name": "GP 8",
+                    "results": [
+                        {"playerId": 1, "points": 19, "races": 5},
+                        {"playerId": 2, "points": 14, "races": 5},
+                        {"playerId": 3, "points": 7, "races": 5},
+                        {"playerId": 4, "points": 14, "races": 5},
+                        {"playerId": 5, "points": 6, "races": 2},
+                        {"playerId": 6, "points": 9, "races": 3},
+                        {"playerId": 7, "points": 16, "races": 5}
+                    ]
                 }
             ]
         }
     ],
     
     "minorInfo": [
-        "Pan Wójt to szuja! Po raz kolejny udowodnił, że potrafi zaskoczyć wszystkich i być większą mendą niż poprzednio!",
-        "Patryk Pan Wójt Zawierucha zdobywa nagrode śmiecia sezonu już w połowie sezonu! Gratulacje, spodziewaj się rzeźby z cobla pod domem!",
-        "Zawierucha zrobił zawieruchę i wywiało go spoza następnych zawodów! Sędziowie jednogłośni, ban dla tego pajaca!"
+        "Kontuzja Przybandziaka nie pozwoliła mu wystartować w ostatnim evencie! Miejmy nadzieję, że wyleczy się do następnego sezonu!",
+        "Palsprzęgło stracił połączenie ze swoim teamem na ostatniej prostej! Sędziowie nie mieli innego wyjścia, jak zdyskwalifikować go z ostatniego eventu sezonu! Szkoda, bo był w dobrej formie, ale takie są zasady!",
+        "Marucha wleciał na koniec sezonu z dużym impetem, ale niestety zabrakło mu czasu, żeby nadrobić straty z poczatku sezonu!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
