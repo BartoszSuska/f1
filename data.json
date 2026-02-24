@@ -4,7 +4,7 @@
             "playerId": 1, "name": "DZICCO PALTEGUMMI", "image": "images/dzicco.png", "color": "#FE8001", "text": "#FFFFFF", "seasonsWon": 0, "cupsWon": 0
         },
         {
-            "playerId": 2, "name": "ZYGZAK MCGRZYB", "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF", "seasonsWon": 2, "cupsWon": 0
+            "playerId": 2, "name": "ZYGZAK MCGRZYB", "image": "images/krzychu.png", "color": "#FF0000", "text": "#FFFFFF", "seasonsWon": 3, "cupsWon": 0
         },
         {
             "playerId": 3, "name": "PATRYK PAN WÓJT ZAWIERUCHA", "image": "images/rudhini-sad.png", "color": "#14175E", "text": "#FFFFFF", "seasonsWon": 0, "cupsWon": 1
