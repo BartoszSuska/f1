@@ -264,13 +264,32 @@
                     ]
                 }
             ]
+        },
+                {
+            "seasonId": 3,
+            "name": "KRZYCHSON HORNET CUP 2",
+            "events": [
+                {
+                    "id": 1,
+                    "name": "KHC 1",
+                    "results": [
+                        {"playerId": 1, "points": 7, "races": 3},
+                        {"playerId": 2, "points": 11, "races": 3},
+                        {"playerId": 3, "points": 6, "races": 3},
+                        {"playerId": 4, "points": 9, "races": 3},
+                        {"playerId": 5, "points": 9, "races": 3},
+                        {"playerId": 6, "points": 9, "races": 3},
+                        {"playerId": 7, "points": 0, "races": 0}
+                    ]
+                }
+            ]
         }
     ],
     
     "minorInfo": [
-        "Kontuzja Przybandziaka nie pozwoliła mu wystartować w ostatnim evencie! Miejmy nadzieję, że wyleczy się do następnego sezonu!",
-        "Palsprzęgło stracił połączenie ze swoim teamem na ostatniej prostej! Sędziowie nie mieli innego wyjścia, jak zdyskwalifikować go z ostatniego eventu sezonu! Szkoda, bo był w dobrej formie, ale takie są zasady!",
-        "Marucha wleciał na koniec sezonu z dużym impetem, ale niestety zabrakło mu czasu, żeby nadrobić straty z poczatku sezonu!"
+        "Krzychson Hornet Cup w Austrii zakończony pod znakiem słabości austriackiego internetu!",
+        "Nie wiem co tu wpisać jeszcze, powiedzmy, że po prostu napiszę losowe rzeczy!",
+        "Remis... wszystkich praktycznie, ale najważniejsze, że Pan Wójt ostatni!"
     ],
     "clips": [
         {"file": "clips/vid001.mp4"},
